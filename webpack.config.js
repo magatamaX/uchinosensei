@@ -99,7 +99,8 @@ module.exports = [
                                 options: {
                                     sourceMap: isDev,
                                     importLoaders: 2,
-                                    // minimize: scssMinimize
+                                    minimize: scssMinimize,
+                                    url: false
                                 }
                             },
                             { // autoprefixer を利用するために postcss を利用
@@ -111,7 +112,8 @@ module.exports = [
                             { // Sassをバンドルするための機能
                                 loader: 'sass-loader',
                                 options: {
-                                    sourceMap: isDev
+                                    sourceMap: isDev,
+                                    url: false
                                 }
                             }
                         ]
