@@ -6,6 +6,41 @@
 // /sample/index.html
 //
 // ---------------------------------------------------------------------------
+    .p-fuan {
+
+        background-color: #D4F2FF;
+        @include pt(120px);
+        @include pb(40px);
+        text-align: center;
+
+        .inner {
+            background-image: url('./../images/fuan/fuanman.png');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: right bottom;
+        }
+
+        .title {
+            @include fontSize(52.47px);
+            font-weight: bold;
+
+            &__emph {
+                color: #0071BC;
+                font-weight: bold;
+                @include fontSize(73.74px);
+            }
+        }
+
+        .list {
+            color: #0071BC;
+            @include fontSize(27.32px);
+        }
+
+        .next {
+            font-weight: bold;
+            @include fontSize(52.47px);
+        }
+    }
 
 
 }//.fw

@@ -1,11 +1,45 @@
 @charset "utf-8";
 
 .fw {
-// ---------------------------------------------------------------------------
-//
-// /sample/page.html
-//
-// ---------------------------------------------------------------------------
+
+    .p-kv {
+        @include pb(236px);
+        background-image: url('./../images/kv/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center bottom;
+
+        .lead {
+            @include fontSize(38px);
+        }
+
+        .kvBox {
+            @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
+            @include pd(0 60px);
+
+            .title {
+
+                &__upper {
+                    @include fontSize(58px);
+                    display: block;
+                }
+
+                &__under {
+                    @include fontSize(74px);
+                    display: block;
+                }
+
+                &__sub {
+                    @include fontSize(36.84px);
+                }
+            }
+
+            .cover {
+                flex: 0 0 235px;
+            }
+        }
+
+    }
 
 
 }//.fw

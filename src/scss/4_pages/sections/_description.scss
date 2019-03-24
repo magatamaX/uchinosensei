@@ -6,6 +6,52 @@
 // /sample/page.html
 //
 // ---------------------------------------------------------------------------
+    .p-description {
+        @include pt(50px);
+
+        .box {
+            background-color: #FDFFE3;
+            @include pd(80px 0 60px);
+            text-align: center;
+            @include fontSize(36px);
+        }
+
+        .more {
+            @include fontSize(36px);
+            text-align: center;
+
+            &__emph {
+                @include fontSize(48px);
+                font-weight: bold;
+                
+            }
+
+        }
+
+        .seminar {
+            @include pt(30px);
+            font-weight: bold;
+            @include fontSize(24px);
+
+            &__logo {
+                @include mb(20px);
+            }
+
+            &__list {
+            
+            }
+
+            &__item {
+                text-indent: -1em;
+                margin-left: 1em;
+                &::before {
+                    content: '・';
+                }
+            }
+
+        }
+
+    }
 
 
 }//.fw

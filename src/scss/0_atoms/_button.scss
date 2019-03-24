@@ -6,5 +6,17 @@
     // Button
     // ----------------------------------------------------------
 
+    .a-button {
+        @include flexBase($wrap: "nowrap", $direction: "column", $justify: "center", $align: "center");
+        background-color: #FBB03B;
+        color: #000;
+        text-align: center;
+        @include height(77px);
+        border-radius: 8px;
+        box-shadow: 0 12px 0 #CCCCCC;
+        @include fontSize(25.28px);
+        font-weight: bold;
+    }
+
 
 }//.fw
