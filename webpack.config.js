@@ -26,7 +26,7 @@ const JS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'source
 ** devServer Setting
 ***************************************/
 const DEV_SERVER = {
-    // contentBase: "/",
+    contentBase: ROOT_PATH_NAME,
     publicPath: "/",
     // open: true,
     port: 3000,
@@ -50,7 +50,7 @@ module.exports = [
         cache: true,
         entry: JS_ENTRY,
         output: {
-            path: `${__dirname}`,
+            path: `${__dirname}/${ROOT_PATH_NAME}`,
             filename: '[name].js'
         },
 
@@ -85,7 +85,7 @@ module.exports = [
         },
         entry: SCSS_ENTRY,
         output: {
-            path: `${__dirname}`,
+            path: `${__dirname}/${ROOT_PATH_NAME}`,
             filename: '[name].css'
         },
         module: {
