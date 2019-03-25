@@ -7,5 +7,142 @@
 //
 // ---------------------------------------------------------------------------
 
+    .p-seminar {
+        background-color: #FFFFF0;
+        @include pd(90px 0 0);
+
+        .guidance {
+            @include fontSize(32px);
+            @include mb(140px);
+
+            .title {
+                
+                @include fontSize(48px);
+                font-weight: bold;
+                text-align: center;
+                @include mb(80px);
+
+                &__logo {
+                    @include width(374px);
+                    display: block;
+                    @include mg(0 auto 10px);
+                }
+            }
+
+            .contents {
+                background-color: #fff;
+                @include pd(60px 100px 100px);
+                box-shadow: 0 8px 0 rgba(0,0,0,.25);
+                @include mt(90px);
+
+                &__title {
+                    text-align: center;
+                    @include fontSize(36px);
+                    font-weight: bold;
+                    color: #677ABB;
+                    @include mb(50px);
+                }
+
+                &__data {
+
+                }
+
+                &__list {
+                    @include fontSize(45px);
+                    font-weight: bold;
+                    @include mg(0 30px 50px);
+
+                }
+
+                &__item {
+                    + .contents__item {
+                        @include mt(10px);
+                    }
+                }
+
+                &__note {
+                    @include fontSize(18px);
+                    text-align: center;
+                }
+            }
+        }
+
+        &__detail {
+            @include mt(90px);
+            @include pd(90px 0);
+            background-image: url('../images/seminar/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+
+            .detail {
+                @include fontSize(22px);
+
+                .title {
+                    @include fontSize(36px);
+                    font-weight: bold;
+                    text-align: center;
+                    @include mb(90px);
+                }
+
+                .detailBox {
+                    background-color: #fff;
+                    @include pt(40px);
+
+                    &__inner {
+                        @include pd(30px 88px 50px);
+                    }
+
+                    &__title {
+                        background-color: #0C913A;
+                        color: #fff;
+                        @include fontSize(28px);
+                        line-height: 46.667px;
+                        @include width(252px);
+                        text-indent: 98px;
+                        @include ml(-10px);
+                        font-weight: bold;
+                    }
+
+                    .schedule {
+                        font-weight: bold;
+
+                        &__date {
+                            @include pl(30px);
+                            @include width(140px);
+                        }
+
+                        &__time {
+                            @include width(80px);
+                        }
+                    }
+
+                    .map {
+                        @include mt(40px);
+
+                        &__iframe {
+                            @include width(100%);
+                            @include height(420px);
+                        }
+                    }
+
+                    .tel {
+                        font-weight: bold;
+                        @include mt(30px);
+                        @include fontSize(30px);
+
+                        &__num {
+                            color: #333;
+                        }
+
+                        &__freedial {
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 }//.fw

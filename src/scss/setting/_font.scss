@@ -2,8 +2,22 @@
 
 // Font Family
 //------------------------------------------------------------------------------
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
-	$font_base: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif;
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Bold");
+	font-weight: bold;
+}
+
+	$font_base: "Yu Gothic","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif;
+	$font_heavy: 'Noto Sans JP';
+	$font_din: din-2014, sans-serif;
 
 
 // Font Size

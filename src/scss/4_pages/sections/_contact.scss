@@ -7,5 +7,30 @@
 //
 // ---------------------------------------------------------------------------
 
+    .p-contact {
+        background-color: #E6E6E6;
+        @include pd(120px 0 90px);
+        text-align: center;
+        color: #000;
+
+        .title {
+            @include fontSize(36px);
+            font-weight: bold;
+            @include mb(40px);
+        }
+
+        .tel {
+            @include fontSize(81.24px);
+            font-family: $font_din;
+            color: #000;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .note {
+            @include fontSize(13px);
+            @include mt(40px);
+        }
+    }
 
 }//.fw

@@ -7,5 +7,61 @@
 //
 // ---------------------------------------------------------------------------
 
+    .p-message {
+        background-color: #FFFFF0;
+        @include pd(120px 0 230px);
+
+        .title {
+            @include fontSize(36px);
+            font-weight: bold;
+            text-align: center;
+            @include mb(40px);
+        }
+
+        .message {
+            @include fontSize(21px);
+            line-height: 36px;
+            background-color: #fff;
+            @include pd(60px);
+            text-align: center;
+            @include mb(40px);
+
+            &__text {
+                + .message__text {
+                    @include mt(40px);
+                }
+            }
+        }
+
+        .doctor {
+            @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
+
+            &__image {
+                flex: 0 0 440px;
+            }
+
+            &__content {
+                @include fontSize(21px);
+                @include pt(45px);
+                @include pl(60px);
+            }
+
+            &__position {
+                @include fontSize(24px);
+                @include mg(30px 0);
+            }
+
+            &__name {
+                font-weight: bold;
+                @include fontSize(36px);
+                @include mb(30px);
+            }
+
+            &__information {
+                @include fontSize(18px);
+            }
+        }
+    }
+
 
 }//.fw

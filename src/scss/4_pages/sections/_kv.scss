@@ -3,7 +3,9 @@
 .fw {
 
     .p-kv {
-        @include pb(236px);
+        border-top: 1px solid #000;
+        @include pt(50px);
+        @include pb(236+80px);
         background-image: url('./../images/kv/bg.jpg');
         background-repeat: no-repeat;
         background-size: auto;
@@ -11,6 +13,10 @@
 
         .lead {
             @include fontSize(38px);
+            font-weight: bold;
+            @include mb(60px);
+            color: #F15A24;
+            text-align: center;
         }
 
         .kvBox {
@@ -18,24 +24,40 @@
             @include pd(0 60px);
 
             .title {
+                line-height: 1.3;
 
                 &__upper {
                     @include fontSize(58px);
                     display: block;
+                    font-weight: bold;
                 }
 
                 &__under {
                     @include fontSize(74px);
                     display: block;
+                    font-weight: bold;
+
+                    &::after {
+                        content: url('../images/kv/icon.png');
+                        display: inline-block;
+                        line-height: 1;
+                        vertical-align: text-top;
+                        margin-left: 10px;
+                    }
                 }
 
                 &__sub {
                     @include fontSize(36.84px);
+                    @include mb(40px);
                 }
             }
 
             .cover {
                 flex: 0 0 235px;
+
+                &__img {
+                    box-shadow: 20px 20px 10px rgba(0,0,0,.25);
+                }
             }
         }
 

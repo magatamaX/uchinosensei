@@ -7,5 +7,49 @@
 //
 // ---------------------------------------------------------------------------
 
+    .p-otherbook {
+        @include pd(60px 0 100px);
+        background-color: #FFFFF0;
+
+        .title {
+            @include fontSize(27.93px);
+            font-weight: bold;
+            @include mb(50px);
+            text-align: center;
+        }
+
+        .otherbook {
+            @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
+
+            &__image {
+                flex: 0 0 207.845px;
+            }
+
+            &__cover {
+                box-shadow: 7px 7px 0 rgba(0,0,0,.25);
+            }
+
+            &__information {
+                @include pl(60px);
+            }
+
+            &__title {
+                @include fontSize(27.93px);
+                line-height: 41.9px;
+                font-weight: bold;
+                text-indent: -1em;
+                @include mb(10px);
+                @include pl(.5em);
+            }
+
+            &__introduction {
+                @include fontSize(14px);
+                @include mb(40px);
+            }
+        }
+
+
+    }
+
 
 }//.fw

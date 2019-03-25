@@ -36,6 +36,33 @@
                 }
             }
         }
+
+        .point {
+
+            &__title {
+                @include fontSize(33.46px);
+                font-weight: bold;
+                position: relative;
+                @include mb(40px);
+
+                &::before {
+                    content: url('../images/book/hand.svg');
+                    @include width(54.483px);
+                    display: inline-block;
+                    vertical-align: text-top;
+                }
+            }
+
+            &__list {
+                @include fontSize(36px);
+            }
+
+            &__item {
+                + .point__item {
+                    @include mt(40px);
+                }
+            }
+        }
     }
 
 

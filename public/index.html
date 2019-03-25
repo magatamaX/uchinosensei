@@ -24,13 +24,14 @@
     <meta property="og:site_name" content="">
     <meta property="og:description" content="">
 
+    <link rel="stylesheet" href="https://use.typekit.net/iba4vyc.css">
     <link href="./assets/css/style.css" rel="stylesheet">
 
 </head>
 
 <body class="fw">
 
-    <header>
+    <header class="o-header">
         <div class="f-inner">
             智勝社「運転免許認知機能検査まるわかり本　75歳からの免許更新に備えよう」
         </div>
@@ -59,7 +60,9 @@
                             <a class="a-button">amazonで購入する</a>
                         </div>
 
-                        <figure class="cover"><img src="assets/images/common/book.jpg" alt="運転免許認知機能検査まるわかり本" /></figure>
+                        <figure class="cover">
+                            <img class="cover__img" src="assets/images/common/book.jpg" alt="運転免許認知機能検査まるわかり本" />
+                        </figure>
 
                     </div>
 
@@ -158,11 +161,11 @@
                     </div>
 
                     <div class="point">
-                        <h3 class="point__title">この本のポイント</h3>
+                        <h3 class="point__title"><span class="a-marker--under">この本のポイント</span></h3>
                         <ol class="point__list">
-                            <li>実際の認知機能検査で出題されるすべての問題を網羅</li>
-                            <li>実際の検査に近い模擬検査を用意、事前の準備が可能</li>
-                            <li>脳神経内科医の内野勝行先生が監修</li>
+                            <li class="point__item">実際の認知機能検査で出題される<span class="a-marker--under">すべての問題</span>を網羅</li>
+                            <li class="point__item">実際の検査に近い<span class="a-marker--under">模擬検査</span>を用意、事前の準備が可能</li>
+                            <li class="point__item">脳神経内科医の<span class="a-marker--under">内野勝行先生</span>が監修</li>
                         </ol>
                     </div>
                 </div>
@@ -204,64 +207,76 @@
 
                         <div class="detailBox">
 
-                            <section class="detailBox__item">
+                            <section>
 
-                                <h4 class="title">会場・日時</h4>
+                                <h4 class="detailBox__title">会場・日時</h4>
 
-                                <table class="schedule">
-                                    <tbody>
-                                        <tr>
-                                            <th class="schedule__date">4/13　土</th>
-                                            <td class="schedule__time">14:00</td>
-                                            <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="schedule__date">4/20　土</th>
-                                            <td class="schedule__time">14:00</td>
-                                            <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="schedule__date">4/27　土</th>
-                                            <td class="schedule__time">14:00</td>
-                                            <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="schedule__date">4/XX　土</th>
-                                            <td class="schedule__time">14:00</td>
-                                            <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
-                                        </tr>
-                                        <tr>
-                                            <th class="schedule__date">4/XX　土</th>
-                                            <td class="schedule__time">14:00</td>
-                                            <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="detailBox__inner">
 
-                            </section>
+                                    <table class="f-table_stripe schedule">
+                                        <tbody>
+                                            <tr>
+                                                <th class="schedule__date">4/13　土</th>
+                                                <td class="schedule__time">14:00</td>
+                                                <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="schedule__date">4/20　土</th>
+                                                <td class="schedule__time">14:00</td>
+                                                <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="schedule__date">4/27　土</th>
+                                                <td class="schedule__time">14:00</td>
+                                                <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="schedule__date">4/XX　土</th>
+                                                <td class="schedule__time">14:00</td>
+                                                <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="schedule__date">4/XX　土</th>
+                                                <td class="schedule__time">14:00</td>
+                                                <td class="schedule__place">会場 ： 金町脳神経内科・耳鼻咽喉科</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                            <section class="detailBox__item">
-
-                                <h4 class="title">詳細情報</h4>
-
-                                <p>受講料：3,000円/回（消費税、テキスト代込）</p>
-                                <p>所要時間：約2時間</p>
-                                <p>持参いただくもの：筆記用具、受講料</p>
-                                <p>※会場には駐車場がございませんので、お越しの際は公共交通機関もしくは近隣の駐車場（有料）をご利用ください。</p>
-
-                                <div class="map">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.2465194482684!2d139.87161295122607!3d35.76932033264512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018857152afede9%3A0xe7d779af4b8e10f1!2z6YeR55S66ISz56We57WM5YaF56eR44O76ICz6by75ZK95ZaJ56eR!5e0!3m2!1sja!2sjp!4v1553437642533" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
 
                             </section>
 
-                            <section class="detailBox__item">
+                            <section>
 
-                                <h4 class="title">お問合せ</h4>
+                                <h4 class="detailBox__title">詳細情報</h4>
 
-                                <p>ご予約・お問い合わせは下記のお電話にて承っております。</p>
-                                <p>TEL：<a href="tel:012012345678">0120-1234-5678</a>（フリーダイヤル）</p>
-                                <p>受付時間：9：00～12：00、13：00～17：30（土、日、祝日、弊社休業日を除く）</p>
+                                <div class="detailBox__inner">
+
+                                    <p class="a-font--bold">受講料：3,000円/回（消費税、テキスト代込）</p>
+                                    <p class="a-font--bold">所要時間：約2時間</p>
+                                    <p class="a-font--bold">持参いただくもの：筆記用具、受講料</p>
+                                    <p>※会場には駐車場がございませんので、お越しの際は公共交通機関もしくは近隣の駐車場（有料）をご利用ください。</p>
+
+                                    <div class="map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.2465194482684!2d139.87161295122607!3d35.76932033264512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018857152afede9%3A0xe7d779af4b8e10f1!2z6YeR55S66ISz56We57WM5YaF56eR44O76ICz6by75ZK95ZaJ56eR!5e0!3m2!1sja!2sjp!4v1553437642533" class="map__iframe" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                            <section>
+
+                                <h4 class="detailBox__title">お問合せ</h4>
+
+                                <div class="detailBox__inner">
+
+                                    <p>ご予約・お問い合わせは下記のお電話にて承っております。</p>
+                                    <p class="tel">TEL：<a class="tel__num" href="tel:012012345678">0120-1234-5678</a><span class="tel__freedial">（フリーダイヤル）</span></p>
+                                    <p>受付時間：9：00～12：00、13：00～17：30（土、日、祝日、弊社休業日を除く）</p>
+
+                                </div>
 
                             </section>
 
@@ -280,39 +295,39 @@
 
                     <h2 class="title">メッセージ</h2>
 
-                    <div class="messageBox">
-                        <p>脳神経内科の内野勝行です。<br>
+                    <div class="message">
+                        <p class="message__text">脳神経内科の内野勝行です。<br>
                         この度本書を上梓するにあたりごあいさつさせていただきます。</p>
                         
-                        <p>まず脳神経内科というのは馴染みがない方も多いと思いますが<br>
+                        <p class="message__text">まず脳神経内科というのは馴染みがない方も多いと思いますが<br>
                         認知症や脳卒中などを中心に診察する科です。<br>
                         認知症に関してはタイプを見分けて診断治療を行わなければならず<br>
                         専門科として注目されている診療科です。</p>
                         
-                        <p>最近ニュースで認知症の方の交通事故が報じられていますが<br>
+                        <p class="message__text">最近ニュースで認知症の方の交通事故が報じられていますが<br>
                         行政も本格的に対策に乗り出しました。<br>
                         2017年から高齢者の方の自動車免許更新の際に認知機能検査が必須になりました。<br>
                         その結果認知症の疑いがある方は必ず医師の受診が必要となります。<br>
                         本書はその認知症検査の一助になると確信しております。</p>
                         
-                        <p>さらにまだ年齢が75に達していなくても<br>
+                        <p class="message__text">さらにまだ年齢が75に達していなくても<br>
                         対策を立てることが可能になると考えております。</p>
                         
-                        <p>認知症対策は早めの予防が大切です。<br>
+                        <p class="message__text">認知症対策は早めの予防が大切です。<br>
                         1日も早い脳トレで運転も人生も安全運転が出来るようご活用ください。</p>
                     </div>
 
-                    <div class="f-flex f-flex_mg20 f-flex_mg10_s">
+                    <div class="doctor">
 
-                        <figure class="f-flex6 f-flex12_s">
+                        <figure class="doctor__image">
                             <img src="assets/images/message/uchino.png" alt="医療法人社団天照会 金町脳神経内科・耳鼻咽喉科 理事長 内野 勝行">
                         </figure>
 
-                        <div class="f-flex6 f-flex12_s">
+                        <div class="doctor__content">
                             <p>監修</p>
-                            <p>医療法人社団天照会<br>金町脳神経内科・耳鼻咽喉科　理事長</p>
-                            <p>内野 勝行</p>
-                            <p>日本内科学会認定医。厚生労働省認定認知症サポート医。フジテレビ系「ノンストップ！」等テレビ出演・監修多数。</p>
+                            <p class="doctor__position">医療法人社団天照会<br>金町脳神経内科・耳鼻咽喉科　理事長</p>
+                            <p class="doctor__name">内野 勝行</p>
+                            <p class="doctor__information">日本内科学会認定医。厚生労働省認定認知症サポート医。フジテレビ系「ノンストップ！」等テレビ出演・監修多数。</p>
 
                         </div>
                     </div>
@@ -335,8 +350,8 @@
                             <div class="book__text">
 
                                 <div class="titleBox">
-                                    <h3 class="titleBox__title">運転免許認知機能検査まるわかり本</h3>
-                                    <p class="titleBox__subtitle">75際からの免許更新に備えよう</p>
+                                    <h3 class="titleBox__title">運転免許認知機能検査<br>まるわかり本</h3>
+                                    <p class="titleBox__subtitle">75歳からの免許更新に備えよう</p>
                                 </div>
 
                                 <dl class="contents">
@@ -356,7 +371,7 @@
                             </div>
 
                             <figure class="book__image">
-                                <img src="assets/images/common/book.jpg" alt="運転免許認知機能検査まるわかり本">
+                                <img class="book__cover" src="assets/images/common/book.jpg" alt="運転免許認知機能検査まるわかり本">
                                 <figcaption class="book__caption">監修：内野 勝行（医療法人社団  金町脳神経内科・耳鼻咽喉科  理事長）<br>
                                     発売：メディアパル　発行：エヌプラス<br>
                                     定価：900円＋税</figcaption>
@@ -381,7 +396,7 @@
 
                     <a class="a-button" href="" target="_blank">セミナーに参加する</a>
 
-                    <p class="note">セミナーに関する備考などが入ります。セミナーに関する備考などが入ります。セミナーに関する備考などが入ります。セミナーに関する備考などが入ります。</p>
+                    <p class="note">セミナーに関する備考などが入ります。セミナーに関する備考などが入ります。<br>セミナーに関する備考などが入ります。セミナーに関する備考などが入ります。</p>
 
                 </div>
 
@@ -392,16 +407,18 @@
 
                 <div class="f-inner">
 
-                    <h2 class="title">合わせて読みたい！オススメ書籍</h2>
+                    <h2 class="title a-marker">合わせて読みたい！オススメ書籍</h2>
 
-                    <div class="otherbookBox">
+                    <div class="otherbook">
 
-                        <figure class="image"><img src="assets/images/common/otherbook.jpg" alt="シニアドライバーズエクササイズ"></figure>
+                        <figure class="otherbook__image">
+                            <img class="otherbook__cover" src="assets/images/common/otherbook.jpg" alt="シニアドライバーズエクササイズ">
+                        </figure>
 
-                        <div class="introduction">
+                        <div class="otherbook__information">
 
-                            <h3 class="introduction__title">『シニアドライバーズエクササイズ<br>70過ぎても安全運転 脳と体のいきいき体操』</h3>
-                            <p class="introduction__text">身体と脳を無理なく鍛えて、安全な運転を。シニア世代(70歳以上)の方が、長く快適なカーライフを送っていただけるように、運転に必要な反射神経や筋力を養うための体操を紹介しています。付録のDVDで、インストラクターの模範体操や解説を見ながら体操していただけます。<br>
+                            <h3 class="otherbook__title">『シニアドライバーズエクササイズ<br>70過ぎても安全運転 脳と体のいきいき体操』</h3>
+                            <p class="otherbook__introduction">身体と脳を無理なく鍛えて、安全な運転を。シニア世代(70歳以上)の方が、長く快適なカーライフを送っていただけるように、運転に必要な反射神経や筋力を養うための体操を紹介しています。付録のDVDで、インストラクターの模範体操や解説を見ながら体操していただけます。<br>
                             監修：内野 勝行（医療法人社団  金町脳神経内科・耳鼻咽喉科  理事長）　発売：メディアパル　発行：エヌプラス<br>
                             定価：1300円＋税</p>
 
@@ -421,9 +438,9 @@
 
                     <h2 class="title">本ガイダンスに関するお問合せ</h2>
 
-                    <a class="tel-number" href="tel:012012345678">0120-1234-5678</a>
+                    <a class="tel" href="tel:012012345678">0120-1234-5678</a>
 
-                    <p class="note">ここは備考などが入ります。ここは備考などが入ります。ここは備考などが入ります。ここは備考などが入ります。ここは備考などが入ります。</p>
+                    <p class="note">ここは備考などが入ります。ここは備考などが入ります。ここは備考などが入ります。<br>ここは備考などが入ります。ここは備考などが入ります。</p>
                 </div>
             </section>
 
@@ -433,7 +450,7 @@
     </div>
     <!-- /#container -->
 
-    <footer>
+    <footer class="o-footer">
         <div class="f-inner">
             ここはフッター情報が入ります。
         </div>

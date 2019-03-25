@@ -7,5 +7,83 @@
 //
 // ---------------------------------------------------------------------------
 
+    .p-cv {
+        @include pd(80px 0 120px);
+        background-image: url('../images/cv/bg.jpg');
+        background-repeat: repeat;
+        background-size: auto;
+        background-position: center top;
+        @include fontSize(24px);
+
+        .title {
+            @include fontSize(50.63px);
+            color: #006837;
+            font-weight: bold;
+            text-align: center;
+            @include mb(50px);
+        }
+
+        .bookBox {
+            background-color: #fff;
+            @include pd(60px 40px 80px);
+
+            .book {
+                @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
+                @include mb(40px);
+
+                &__text {
+
+                    .titleBox {
+                        @include mb(60px);
+
+                        &__title {
+                            @include fontSize(45.88px);
+                            font-weight: bold;
+                            @include mb(10px);
+                        }
+
+                        &__subtitle {
+                            @include fontSize(30.45px);
+                        }
+                    }
+
+                    .contents {
+
+                        &__title {
+                            @include mb(10px);
+
+                            &::before {
+                                content: '●';
+                                color: #F7931E;
+                            }
+                        }
+
+                        &__item {
+                            
+                            &::before {
+                                content: '・';
+                            }
+                        }
+                    }
+
+                }
+
+                &__image {
+                    flex: 0 0 341px;
+                }
+
+                &__cover {
+                    box-shadow: 12px 12px 10px rgba(0,0,0,.25);
+                }
+
+                &__caption {
+                    @include fontSize(14px);
+                    @include mt(30px);
+                }
+            }
+        }
+
+    }
+
 
 }//.fw

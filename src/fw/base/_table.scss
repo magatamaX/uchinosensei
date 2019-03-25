@@ -12,7 +12,7 @@ table {
 	border-spacing: 0;
 
 	th,td {
-		padding: 15px;
+		padding: 25px 10px;
 		// @include columnWidth( $class );
 		&.f-table_bg_gray { background: $black0; color: $color_text; }
 	}
