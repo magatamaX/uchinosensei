@@ -9,26 +9,31 @@
 
     .p-message {
         background-color: #FFFFF0;
-        @include pd(120px 0 230px);
+        @include pd(120px 0 230px, 15vw 0 15vw);
 
         .title {
-            @include fontSize(36px);
+            @include fontSize(36px, 8vw);
             font-weight: bold;
             text-align: center;
-            @include mb(40px);
+            @include mb(40px, 10vw);
         }
 
         .message {
-            @include fontSize(21px);
+            @include fontSize(21px, 4vw);
             line-height: 36px;
             background-color: #fff;
-            @include pd(60px);
+            @include pd(60px, 7vw 5vw);
             text-align: center;
-            @include mb(40px);
+            @include mb(40px, 10vw);
+
+            @include max(s) {
+                line-height: 1.8;
+                text-align: left;
+            }
 
             &__text {
                 + .message__text {
-                    @include mt(40px);
+                    @include mt(40px, 5vw);
                 }
             }
         }
@@ -36,29 +41,34 @@
         .doctor {
             @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
 
+            @include max(s) {
+                display: block;
+                text-align: center;
+            }
+
             &__image {
                 flex: 0 0 440px;
             }
 
             &__content {
-                @include fontSize(21px);
-                @include pt(45px);
-                @include pl(60px);
+                @include fontSize(21px, 5vw);
+                @include pt(45px, 10vw);
+                @include pl(60px, 0);
             }
 
             &__position {
-                @include fontSize(24px);
-                @include mg(30px 0);
+                @include fontSize(24px, 4vw);
+                @include mg(30px 0, 5vw 0);
             }
 
             &__name {
                 font-weight: bold;
-                @include fontSize(36px);
-                @include mb(30px);
+                @include fontSize(36px, 7vw);
+                @include mb(30px, 5vw);
             }
 
             &__information {
-                @include fontSize(18px);
+                @include fontSize(18px, 3vw);
             }
         }
     }

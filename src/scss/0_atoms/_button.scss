@@ -10,17 +10,32 @@
         background-color: #FBB03B;
         color: #000;
         text-align: center;
-        @include height(77px);
+        @include height(77px, 16.5vw);
         border-radius: 8px;
         box-shadow: 0 12px 0 rgba(0,0,0,.2);
-        @include fontSize(25.28px);
+        @include fontSize(25.28px, 5vw);
         font-weight: bold;
         max-width: 600px;
         @include ml(auto);
         @include mr(auto);
+        transition: opacity .3s linear;
+
+        @include max(s) {
+            box-shadow: 0 6px 0 rgba(0,0,0,.2);
+        }
 
         &:hover {
             opacity: .8;
+        }
+
+        &:active {
+            position: relative;
+            top: 6px;
+            box-shadow: 0 6px 0 rgba(0,0,0,.2);
+
+            @include max(s) {
+                box-shadow: 0 0 0 rgba(0,0,0,.2);
+            }
         }
 
     }
@@ -28,6 +43,10 @@
     .a-button {
         @extend %button;
         @include arrowAbs($color:#000000, $size:13, $width:4,$layout:right,$position:40,$direction:right);
+
+        @include max(s) {
+            @include arrowAbs($color:#000000, $size:8, $width:2,$layout:right,$position:20,$direction:right);
+        }
 
         &--s {
             @extend %button;
@@ -37,8 +56,12 @@
             @include arrowAbs($color:#000000, $size:13, $width:4,$layout:right,$position:40,$direction:right);
             @include height(60.412px);
             @include fontSize(19.83px);
+
+            &:active {
+                box-shadow: 0 3px 0 rgba(0,0,0,.2);
+            }
         }
-        
+
         &--left {
             @include ml(0);
         }
@@ -54,6 +77,10 @@
             box-shadow: 0 9px 0 rgba(0,0,0,.2);
             @include height(60.412px);
             @include fontSize(19.83px);
+
+            &:active {
+                box-shadow: 0 3px 0 rgba(0,0,0,.2);
+            }
         }
     }
 

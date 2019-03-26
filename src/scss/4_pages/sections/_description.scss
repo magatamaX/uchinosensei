@@ -7,26 +7,35 @@
 //
 // ---------------------------------------------------------------------------
     .p-description {
-        @include pd(50px 0 180px);
+        @include pd(50px 0 180px, 15vw 0 20vw);
 
         .box {
             background-color: #FDFFE3;
-            @include pd(80px 0 60px);
+            @include pd(80px 0 60px, 5vw);
             text-align: center;
-            @include fontSize(36px);
-            @include mb(90px);
+            @include fontSize(36px, 5vw);
+            @include mb(90px, 10vw);
             line-height: 72px;
+
+            @include max(s) {
+                line-height: 2;
+            }
         }
 
         .more {
-            @include fontSize(36px);
-            @include mb(120px);
+            @include fontSize(36px, 6vw);
+            @include mb(120px, 20vw);
             text-align: center;
             position: relative;
 
             &__emph {
-                @include fontSize(48px);
+                @include fontSize(48px, 8vw);
                 font-weight: bold;
+
+                @include max(s) {
+                    padding-right: 20vw;
+                    margin-top: 5vw;
+                }
             }
 
             &::after {
@@ -37,25 +46,36 @@
                 background-position: center;
                 position: absolute;
                 @include bottom(0);
-                @include right(-10px);
-                @include width(198.172px);
-                @include height(208.382px);
+                @include right(-10px, 0);
+                @include width(198.172px, 23vw);
+                @include height(208.382px, 28vw);
             }
 
         }
 
         .seminar {
-            @include pt(30px);
+            @include pt(30px, 10vw);
             font-weight: bold;
-            @include fontSize(24px);
+            @include fontSize(24px, 5vw);
 
             &__logo {
-                @include mb(30px);
+                @include mb(30px, 8vw);
                 max-width: 374px;
+                @include width(auto, 70vw);
+                @include ml(0, auto);
+                @include mr(0, auto);
+
+                @include max(s) {
+                    max-width: none;
+                }
             }
 
             &__list {
                 line-height: 48px;
+
+                @include max(s) {
+                    line-height: 2;
+                }
             }
 
             &__item {

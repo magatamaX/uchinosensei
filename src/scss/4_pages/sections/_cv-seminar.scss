@@ -8,19 +8,23 @@
 // ---------------------------------------------------------------------------
 
     .p-cv-seminar {
-        @include pd(160px 0 130px);
+        @include pd(160px 0 130px, 15vw 0 20vw);
         text-align: center;
 
         .title {
-            @include fontSize(28px);
+            @include fontSize(28px, 5vw);
             line-height: 66px;
             font-weight: bold;
-            @include mb(60px);
+            @include mb(60px, 10vw);
+
+            @include max(s) {
+                line-height: 2;
+            }
         }
 
         .note {
-            @include fontSize(15px);
-            @include mt(70px);
+            @include fontSize(15px, 3vw);
+            @include mt(70px, 12vw);
         }
     }
 

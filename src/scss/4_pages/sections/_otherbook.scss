@@ -8,43 +8,61 @@
 // ---------------------------------------------------------------------------
 
     .p-otherbook {
-        @include pd(60px 0 100px);
+        @include pd(60px 0 100px, 15vw 0 20vw);
         background-color: #FFFFF0;
 
         .title {
-            @include fontSize(27.93px);
+            @include fontSize(27.93px, 8vw);
             font-weight: bold;
-            @include mb(50px);
+            @include mb(50px, 10vw);
             text-align: center;
         }
 
         .otherbook {
             @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
 
+            @include max(s) {
+                display: block;
+            }
+
             &__image {
                 flex: 0 0 207.845px;
+
+                @include max(s) {
+                    text-align: center;
+                }
             }
 
             &__cover {
                 box-shadow: 7px 7px 0 rgba(0,0,0,.25);
+
+                @include max(s) {
+                    box-shadow: 2vw 2vw 0 rgba(0,0,0,.25);
+                    width: 60vw;
+                }
             }
 
             &__information {
-                @include pl(60px);
+                @include pl(60px, 0);
+                @include mt(0, 8vw);
             }
 
             &__title {
-                @include fontSize(27.93px);
+                @include fontSize(27.93px, 5.5vw);
                 line-height: 41.9px;
                 font-weight: bold;
                 text-indent: -1em;
-                @include mb(10px);
+                @include mb(10px, 5vw);
                 @include pl(.5em);
+
+                @include max(s) {
+                    line-height: 1.6;
+                }
             }
 
             &__introduction {
-                @include fontSize(14px);
-                @include mb(28px);
+                @include fontSize(14px, 4vw);
+                @include mb(28px, 10vw);
             }
         }
 

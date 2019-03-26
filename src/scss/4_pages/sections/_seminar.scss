@@ -9,38 +9,42 @@
 
     .p-seminar {
         background-color: #FFFFF0;
-        @include pd(90px 0 0);
+        @include pd(90px 0 0, 20vw 0 0);
 
         .guidance {
-            @include fontSize(32px);
-            @include mb(140px);
+            @include fontSize(32px, 4vw);
+            @include mb(140px, 20vw);
 
             .title {
                 
-                @include fontSize(48px);
+                @include fontSize(48px, 8vw);
                 font-weight: bold;
                 text-align: center;
-                @include mb(80px);
+                @include mb(80px, 10vw);
 
                 &__logo {
-                    @include width(374px);
+                    @include width(374px, 77vw);
                     display: block;
-                    @include mg(0 auto 10px);
+                    @include mg(0 auto 10px, 0 auto 2.5vw);
                 }
             }
 
             .contents {
                 background-color: #fff;
-                @include pd(60px 100px 100px);
+                @include pd(60px 100px 100px, 5vw);
                 box-shadow: 0 8px 0 rgba(0,0,0,.25);
-                @include mt(90px);
+                @include mt(90px, 10vw);
+
+                @include max(s) {
+                    box-shadow: 0 2.5vw 0 rgba(0,0,0,.25);
+                }
 
                 &__title {
                     text-align: center;
-                    @include fontSize(36px);
+                    @include fontSize(36px, 6vw);
                     font-weight: bold;
                     color: #677ABB;
-                    @include mb(50px);
+                    @include mb(50px, 7vw);
                 }
 
                 &__data {
@@ -48,88 +52,111 @@
                 }
 
                 &__list {
-                    @include fontSize(45px);
+                    @include fontSize(45px, 5vw);
                     font-weight: bold;
-                    @include mg(0 30px 50px);
+                    @include mg(0 30px 50px, 0 0 7vw);
 
                 }
 
                 &__item {
                     + .contents__item {
-                        @include mt(20px);
+                        @include mt(20px, 5vw);
                     }
                 }
 
                 &__note {
-                    @include fontSize(18px);
+                    @include fontSize(18px, 3vw);
                     text-align: center;
                 }
             }
         }
 
         &__detail {
-            @include mt(90px);
-            @include pd(90px 0);
+            @include pd(90px 0, 13vw 0 20vw);
             background-image: url('../images/seminar/bg.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center top;
 
             .detail {
-                @include fontSize(22px);
+                @include fontSize(22px, 5vw);
 
                 .title {
-                    @include fontSize(36px);
+                    @include fontSize(36px, 8vw);
                     font-weight: bold;
                     text-align: center;
-                    @include mb(90px);
+                    @include mb(90px, 10vw);
                 }
 
                 .detailBox {
                     background-color: #fff;
-                    @include pt(40px);
+                    @include pt(40px, 5vw);
 
                     &__inner {
-                        @include pd(30px 88px 50px);
+                        @include pd(30px 88px 50px, 5vw 5vw 8vw);
+
+                        
+                        @include max(s) {
+                            font-size: 3.5vw;
+                        }
                     }
 
                     &__title {
                         background-color: #0C913A;
                         color: #fff;
-                        @include fontSize(28px);
+                        @include fontSize(28px, 5vw);
                         line-height: 46.667px;
-                        @include width(252px);
+                        @include width(252px, 35vw);
                         text-indent: 98px;
-                        @include ml(-10px);
+                        @include ml(-10px, -2vw);
                         font-weight: bold;
+
+                        @include max(s) {
+                            line-height: 1.6;
+                            text-indent: 7vw;
+                        }
                     }
 
                     .schedule {
+                        table-layout: fixed;
                         font-weight: bold;
 
+                        td,th {
+                            @include pd(25px 10px, 2.5vw);
+
+                            &.schedule__date {
+                                @include pl(30px,0);
+                            }
+                        }
+
                         &__date {
-                            @include pl(30px);
-                            @include width(140px);
+                            @include width(140px,22vw);
                         }
 
                         &__time {
-                            @include width(80px);
+                            @include width(80px,15vw);
                         }
                     }
 
                     .map {
-                        @include mt(40px);
+                        @include mt(40px, 5vw);
 
                         &__iframe {
                             @include width(100%);
-                            @include height(420px);
+                            @include height(420px, 70vw);
                         }
                     }
 
                     .tel {
                         font-weight: bold;
-                        @include mt(30px);
-                        @include fontSize(30px);
+                        @include mt(30px, 5vw);
+                        @include mb(0, 5vw);
+                        @include fontSize(30px, 7vw);
+
+                        @include max(s) {
+                            text-align: center;
+                            line-height: 1.2;
+                        }
 
                         &__num {
                             color: #333;
@@ -137,6 +164,11 @@
 
                         &__freedial {
                             font-weight: normal;
+
+                            @include max(s) {
+                                display: block;
+                                font-size: 4vw;
+                            }
                         }
                     }
                 }

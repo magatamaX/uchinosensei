@@ -29,20 +29,13 @@
     }
 
     %__marker {
-        position: relative;
-        z-index: 0;
+        background-image: linear-gradient(#FCEE21, #FCEE21);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-size: 100% .4em;
+        // @include transition(1, ease-out, 0.5, background-size);
+        // transition( $sec, $ease, $delay, $type )
 
-        &::before {
-            content: '';
-            background-color: #FCEE21;
-            width: 100%;
-            @include height(0.4em);
-            position: absolute;
-            display: block;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
     }
 
     .a-marker {
@@ -51,9 +44,26 @@
         &--under {
             @extend %__marker;
 
-            &::before {
-                @include height(0.2em);
-                bottom: -0.25em;
+            background-size: 100% .2em;
+            @include pb(.2em);
+        }
+    }
+
+    .a-br {
+
+        &--pc {
+            
+            @include max(s) {
+                display: none;
+            }
+
+        }
+
+        &--sp {
+            display: none;
+
+            @include max(s) {
+                display: inline;
             }
         }
     }

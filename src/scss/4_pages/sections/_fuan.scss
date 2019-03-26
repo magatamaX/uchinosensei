@@ -9,8 +9,8 @@
     .p-fuan {
 
         background-color: #D4F2FF;
-        @include pt(120px);
-        @include pb(40px);
+        @include pt(120px, 15vw);
+        @include pb(40px, 15vw);
         text-align: center;
 
         .inner {
@@ -18,31 +18,37 @@
             background-repeat: no-repeat;
             background-size: 142px;
             background-position: right bottom 40px;
+
+            @include max(s) {
+                background-size: 26vw;
+                background-position: right 7vw bottom -2vw;
+            }
         }
 
         .title {
-            @include fontSize(52.47px);
+            @include fontSize(52.47px, 5vw);
             font-weight: bold;
 
             &__emph {
                 color: #0071BC;
                 font-weight: bold;
-                @include fontSize(73.74px);
+                @include fontSize(73.74px, 7vw);
                 font-family: $font_heavy;
             }
         }
 
         .list {
             color: #0071BC;
-            @include fontSize(27.32px);
+            @include fontSize(27.32px, 4.8vw);
             position: relative;
-            @include height(300px);
-            @include mg(70px 0 90px);
+            @include height(300px, 68vw);
+            @include mg(70px 0 90px, 10vw 0 30vw);
 
             %__item {
                 font-weight: bold;
                 display: inline-block;
                 position: absolute;
+                word-break: keep-all;
 
                 &::before {
                     content: '';
@@ -53,7 +59,7 @@
                     background-size: auto;
                     background-position: center bottom;
                     width: 100%;
-                    @include height(18px);
+                    @include height(18px, 4vw);
                 }
             }
 
@@ -72,7 +78,7 @@
                     @extend %__item;
 
                     transform: rotate(9.6deg);
-                    @include top(40px);
+                    @include top(40px, 30vw);
                     @include right(0);
                 }
 
@@ -80,19 +86,27 @@
                     @extend %__item;
 
                     transform: translateX(-50%) rotate(-9.6deg);
-                    @include bottom(40px);
-                    @include left(50%);
+                    @include bottom(40px,0);
+                    @include left(50%,0);
+
+                    @include max(s) {
+                        transform: rotate(-9.6deg);
+                    }
                 }
             }
 
             &__emph {
-                @include fontSize(45.53px);
+                @include fontSize(45.53px, 7vw);
             }
         }
 
         .next {
             font-weight: bold;
-            @include fontSize(52.47px);
+            @include fontSize(52.47px, 7vw);
+
+            @include max(s) {
+                text-align: left;
+            }
         }
     }
 

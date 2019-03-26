@@ -6,8 +6,8 @@
 	// Footer
 	// ----------------------------------------------------------
 	.o-footer {
-		@include pd(20px 0);
-		@include fontSize(14px);
+		@include pd(20px 0, 10px 0);
+		@include fontSize(14px, 4vw);
 		text-align: center;
 	}
 

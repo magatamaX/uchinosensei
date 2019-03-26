@@ -8,49 +8,62 @@
 // ---------------------------------------------------------------------------
 
     .p-cv {
-        @include pd(80px 0 120px);
+        @include pd(80px 0 120px, 15vw 0 20vw);
         background-image: url('../images/cv/bg.jpg');
         background-repeat: repeat;
         background-size: auto;
         background-position: center top;
-        @include fontSize(24px);
+        @include fontSize(24px, 5vw);
 
         .title {
-            @include fontSize(50.63px);
+            @include fontSize(50.63px, 7vw);
             color: #006837;
             font-weight: bold;
             text-align: center;
-            @include mb(50px);
+            @include mb(50px, 10vw);
         }
 
         .bookBox {
             background-color: #fff;
-            @include pd(60px 40px 80px);
+            @include pd(60px 40px 80px, 8vw 5vw 8vw);
 
             .book {
                 @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
-                @include mb(40px);
+                @include mb(40px, 2vw);
+
+                @include max(s) {
+                    display: block;
+                }
 
                 &__text {
 
                     .titleBox {
-                        @include mb(60px);
+                        @include mb(60px, 8vw);
+
+                        @include max(s) {
+                            text-align: center;
+                        }
 
                         &__title {
-                            @include fontSize(45.88px);
+                            @include fontSize(45.88px, 8vw);
                             font-weight: bold;
-                            @include mb(10px);
+                            @include mb(10px, 2vw);
                         }
 
                         &__subtitle {
-                            @include fontSize(30.45px);
+                            @include fontSize(30.45px, 5vw);
                         }
                     }
 
                     .contents {
 
+                        @include max(s) {
+                            font-size: 4vw;
+                            padding: 0 2.5vw;
+                        }
+
                         &__title {
-                            @include mb(10px);
+                            @include mb(10px, 2vw);
 
                             &::before {
                                 content: '●';
@@ -59,6 +72,11 @@
                         }
 
                         &__item {
+
+                            @include max(s) {
+                                text-indent: -1em;
+                                padding-left: 1em;
+                            }
                             
                             &::before {
                                 content: '・';
@@ -70,15 +88,26 @@
 
                 &__image {
                     flex: 0 0 341px;
+
+                    @include max(s) {
+                        text-align: center;
+                        margin-top: 8vw;
+                    }
                 }
 
                 &__cover {
                     box-shadow: 12px 12px 10px rgba(0,0,0,.25);
+
+                    @include max(s) {
+                        box-shadow: 2vw 2vw 2vw rgba(0,0,0,.25);
+                        width: 55vw;
+                    }
                 }
 
                 &__caption {
-                    @include fontSize(14px);
-                    @include mt(30px);
+                    @include fontSize(14px, 2.75vw);
+                    @include mt(30px, 8vw);
+                    @include mb(0, 5vw);
                 }
             }
         }

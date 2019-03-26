@@ -4,59 +4,98 @@
 
     .p-kv {
         border-top: 1px solid #000;
-        @include pt(50px);
-        @include pb(236+80px);
+        @include pt(50px, 10vw);
+        @include pb(236+80px, 35vw);
         background-image: url('./../images/kv/bg.jpg');
         background-repeat: no-repeat;
         background-size: auto;
         background-position: center bottom;
 
+        @include max(s) {
+            background-size: 100%;
+        }
+
         .lead {
-            @include fontSize(38px);
+            @include fontSize(38px, 5vw);
             font-weight: bold;
-            @include mb(60px);
+            @include mb(60px, 6vw);
             color: #F15A24;
             text-align: center;
         }
 
         .kvBox {
-            @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
-            @include pd(0 60px);
+            @include pd(0 60px, 0);
+
+            @include max(s) {
+                display: block;
+            }
 
             .title {
                 line-height: 1.3;
+                @include pr(300px, 0);
+                position: relative;
 
                 &__upper {
-                    @include fontSize(58px);
+                    @include fontSize(58px, 8.5vw);
                     display: block;
                     font-weight: bold;
+
+                    @include max(s) {
+                        text-align: center;
+                    }
                 }
 
                 &__under {
-                    @include fontSize(74px);
+                    @include fontSize(74px, 12.7vw);
                     display: block;
                     font-weight: bold;
 
+                    @include max(s) {
+                        text-align: center;
+                    }
+
                     &::after {
-                        content: url('../images/kv/icon.png');
+                        content: '';
+                        @include width(74px, 10vw);
+                        @include height(86px, 14.5vw);
+                        background-image: url('../images/kv/icon.png');
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        background-position: center;
                         display: inline-block;
                         line-height: 1;
                         vertical-align: text-top;
-                        margin-left: 10px;
+                        @include ml(10px, 5px);
                     }
                 }
 
                 &__sub {
-                    @include fontSize(36.84px);
-                    @include mb(40px);
+                    @include fontSize(36.84px, 5.9vw);
+                    @include mb(40px, 8vw);
+
+                    @include max(s) {
+                        text-align: center;
+                    }
                 }
             }
 
             .cover {
-                flex: 0 0 235px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                @include width(235px, 60vw);
+                @include mg(0, 0 auto 10vw);
+
+                @include max(s) {
+                    position: static;
+                }
 
                 &__img {
                     box-shadow: 20px 20px 10px rgba(0,0,0,.25);
+
+                    @include max(s) {
+                        box-shadow: 3vw 3vw 1.5vw rgba(0,0,0,.25);
+                    }
                 }
             }
         }
