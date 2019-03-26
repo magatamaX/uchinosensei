@@ -16,8 +16,8 @@
         .inner {
             background-image: url('./../images/fuan/fuanman.png');
             background-repeat: no-repeat;
-            background-size: auto;
-            background-position: right bottom;
+            background-size: 142px;
+            background-position: right bottom 40px;
         }
 
         .title {
@@ -35,6 +35,59 @@
         .list {
             color: #0071BC;
             @include fontSize(27.32px);
+            position: relative;
+            @include height(300px);
+            @include mg(70px 0 90px);
+
+            %__item {
+                font-weight: bold;
+                display: inline-block;
+                position: absolute;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    @include bottom(-10px);
+                    background-image: url('../images/fuan/namisen.svg');
+                    background-repeat: repeat-x;
+                    background-size: auto;
+                    background-position: center bottom;
+                    width: 100%;
+                    @include height(18px);
+                }
+            }
+
+            &__item {
+                @extend %__item;
+
+                &--1 {
+                    @extend %__item;
+
+                    transform: rotate(-9.6deg);
+                    @include top(0);
+                    @include left(0);
+                }
+
+                &--2 {
+                    @extend %__item;
+
+                    transform: rotate(9.6deg);
+                    @include top(40px);
+                    @include right(0);
+                }
+
+                &--3 {
+                    @extend %__item;
+
+                    transform: translateX(-50%) rotate(-9.6deg);
+                    @include bottom(40px);
+                    @include left(50%);
+                }
+            }
+
+            &__emph {
+                @include fontSize(45.53px);
+            }
         }
 
         .next {

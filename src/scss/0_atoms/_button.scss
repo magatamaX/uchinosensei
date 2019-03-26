@@ -5,17 +5,56 @@
     // ----------------------------------------------------------
     // Button
     // ----------------------------------------------------------
-
-    .a-button {
+    %button {
         @include flexBase($wrap: "nowrap", $direction: "column", $justify: "center", $align: "center");
         background-color: #FBB03B;
         color: #000;
         text-align: center;
         @include height(77px);
         border-radius: 8px;
-        box-shadow: 0 12px 0 #CCCCCC;
+        box-shadow: 0 12px 0 rgba(0,0,0,.2);
         @include fontSize(25.28px);
         font-weight: bold;
+        max-width: 600px;
+        @include ml(auto);
+        @include mr(auto);
+
+        &:hover {
+            opacity: .8;
+        }
+
+    }
+
+    .a-button {
+        @extend %button;
+        @include arrowAbs($color:#000000, $size:13, $width:4,$layout:right,$position:40,$direction:right);
+
+        &--s {
+            @extend %button;
+            max-width: 390px;
+
+            box-shadow: 0 9px 0 rgba(0,0,0,.2);
+            @include arrowAbs($color:#000000, $size:13, $width:4,$layout:right,$position:40,$direction:right);
+            @include height(60.412px);
+            @include fontSize(19.83px);
+        }
+        
+        &--left {
+            @include ml(0);
+        }
+    }
+
+    .a-button-without-arrow {
+        @extend %button;
+
+        &--s {
+            @extend %button;
+            max-width: 390px;
+
+            box-shadow: 0 9px 0 rgba(0,0,0,.2);
+            @include height(60.412px);
+            @include fontSize(19.83px);
+        }
     }
 
 

@@ -10,10 +10,21 @@
 
         background-color: #0C913A;
         color: #fff;
-        @include pd(80px 0);
+        @include pd(90px 0);
         @include fontSize(21px);
 
         .introduction {
+            @include flexBase($wrap: "nowrap", $direction: "row", $justify: "space-between", $align: "stretch");
+            @include mb(50px);
+
+            &__textBox {
+                flex: 0 0 550px;
+            }
+
+            &__imageBox {
+                flex: 1;
+                @include pd(0 60px);
+            }
 
             &__title {
                 @include fontSize(40.48px);
@@ -22,17 +33,38 @@
             }
 
             .book {
+                position: relative;
+                z-index: 0;
+                @include pt(80px);
 
-                &__image {
-
+                &__cover {
+                    box-shadow: 8px 8px 0 rgba(0,0,0,.25);
+                    @include width(304px);
+                    display: block;
+                    @include mg(0 auto);
                 }
 
                 &__icon {
-
+                    z-index: -1;
+                    position: absolute;
+                    @include top(-65px);
+                    @include right(-115px);
+                    background-color: #FCEE21;
+                    text-align: center;
+                    font-weight: bold;
+                    color: #333333;
+                    border-radius: 50%;
+                    @include width(212px);
+                    @include height(212px);
+                    @include fontSize(24px);
+                    line-height: 36px;
+                    @include flexBase($wrap: "nowrap", $direction: "column", $justify: "center", $align: "center");
                 }
 
                 &__caption {
-                    @include fontSize(18.24px);
+                    @include width(304px);
+                    @include fontSize(16px);
+                    @include mg(20px auto);
                 }
             }
         }

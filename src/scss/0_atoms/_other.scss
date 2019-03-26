@@ -28,5 +28,35 @@
 
     }
 
+    %__marker {
+        position: relative;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            background-color: #FCEE21;
+            width: 100%;
+            @include height(0.4em);
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    .a-marker {
+        @extend %__marker;
+
+        &--under {
+            @extend %__marker;
+
+            &::before {
+                @include height(0.2em);
+                bottom: -0.25em;
+            }
+        }
+    }
+
 
 }//.fw

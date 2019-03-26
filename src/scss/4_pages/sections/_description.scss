@@ -15,17 +15,31 @@
             text-align: center;
             @include fontSize(36px);
             @include mb(90px);
+            line-height: 72px;
         }
 
         .more {
             @include fontSize(36px);
             @include mb(120px);
             text-align: center;
+            position: relative;
 
             &__emph {
                 @include fontSize(48px);
                 font-weight: bold;
-                
+            }
+
+            &::after {
+                content: '';
+                background-image: url('../images/description/man.png');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                position: absolute;
+                @include bottom(0);
+                @include right(-10px);
+                @include width(198.172px);
+                @include height(208.382px);
             }
 
         }
@@ -36,11 +50,12 @@
             @include fontSize(24px);
 
             &__logo {
-                @include mb(20px);
+                @include mb(30px);
+                max-width: 374px;
             }
 
             &__list {
-            
+                line-height: 48px;
             }
 
             &__item {
