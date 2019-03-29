@@ -17,7 +17,7 @@ const SCSS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'sour
 ** JS Setting
 ***************************************/
 const JS_ENTRY = {
-    'assets/js/main': './src/js/main.js',
+    'assets/js/main': ['babel-polyfill', './src/js/main.js'],
 }
 const JS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'source-map', etc.
 

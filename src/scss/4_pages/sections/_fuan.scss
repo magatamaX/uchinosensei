@@ -69,25 +69,31 @@
                 &--1 {
                     @extend %__item;
 
-                    transform: rotate(-9.6deg);
+                    // transform: rotate(-9.6deg);
                     @include top(0);
                     @include left(0);
+
+                    animation: fuwa1 2s linear 0s infinite alternate;
                 }
 
                 &--2 {
                     @extend %__item;
 
-                    transform: rotate(9.6deg);
+                    // transform: rotate(9.6deg);
                     @include top(40px, 30vw);
                     @include right(0);
+
+                    animation: fuwa2 2s linear 0s infinite alternate;
                 }
 
                 &--3 {
                     @extend %__item;
 
-                    transform: translateX(-50%) rotate(-9.6deg);
+                    // transform: translateX(-50%) rotate(-9.6deg);
                     @include bottom(40px,0);
-                    @include left(50%,0);
+                    @include left(24%,0);
+
+                    animation: fuwa3 2s linear 0s infinite alternate;
 
                     @include max(s) {
                         transform: rotate(-9.6deg);
@@ -110,5 +116,30 @@
         }
     }
 
+
+    @keyframes fuwa1 {
+        0% {
+            transform: rotate(-10.6deg) scale(0.9);
+        }
+        100% {
+            transform: rotate(-8.6deg) scale(1);
+        }
+    }
+    @keyframes fuwa2 {
+        0% {
+            transform: rotate(10.6deg) scale(0.9);
+        }
+        100% {
+            transform: rotate(8.6deg) scale(1);
+        }
+    }
+    @keyframes fuwa3 {
+        0% {
+            transform: rotate(-10.6deg) scale(0.9);
+        }
+        100% {
+            transform: rotate(-8.6deg) scale(1);
+        }
+    }
 
 }//.fw

@@ -32,20 +32,33 @@
         background-image: linear-gradient(#FCEE21, #FCEE21);
         background-repeat: no-repeat;
         background-position-y: bottom;
-        background-size: 100% .4em;
+        
         // @include transition(1, ease-out, 0.5, background-size);
         // transition( $sec, $ease, $delay, $type )
+        transition: background-size 1s ease-out;
 
     }
 
     .a-marker {
         @extend %__marker;
+        background-size: 0% .4em;
 
         &--under {
             @extend %__marker;
 
-            background-size: 100% .2em;
+            background-size: 0% .2em;
             @include pb(.2em);
+        }
+    }
+
+    .j-markerset.on {
+
+        .a-marker {
+            background-size: 100% .4em;
+
+            &--under {
+                background-size: 100% .2em;
+            }
         }
     }
 
