@@ -25,7 +25,7 @@
 	// -------------------------------------------
 	// Small Width Layout
 	// -------------------------------------------
-	@include max( $width_main ){
+	@include max( s ){
 
 		.f-inner {
 			width: 100%;
