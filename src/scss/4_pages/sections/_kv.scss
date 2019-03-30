@@ -5,7 +5,7 @@
     .p-kv {
         border-top: 1px solid #000;
         @include pt(50px, 10vw);
-        @include pb(236+80px, 35vw);
+        @include pb(330px, 35vw);
         background-image: url('./../images/kv/bg.jpg');
         background-repeat: no-repeat;
         background-size: auto;
@@ -46,7 +46,7 @@
                 }
 
                 &__under {
-                    @include fontSize(74px, 12.7vw);
+                    @include fontSize(82px, 12.7vw);
                     display: block;
                     font-weight: bold;
 
@@ -70,8 +70,9 @@
                 }
 
                 &__sub {
-                    @include fontSize(36.84px, 5.9vw);
+                    @include fontSize(40px, 5.9vw);
                     @include mb(40px, 8vw);
+                    @include mt(20px, 0);
 
                     @include max(s) {
                         text-align: center;

@@ -51,7 +51,8 @@
         }
     }
 
-    .j-markerset.on {
+    .j-markerset.on,
+    .j-marker-solo.on {
 
         .a-marker {
             background-size: 100% .4em;

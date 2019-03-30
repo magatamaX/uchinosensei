@@ -54,7 +54,7 @@
                 &__list {
                     @include fontSize(45px, 5vw);
                     font-weight: bold;
-                    @include mg(0 30px 50px, 0 0 7vw);
+                    @include mg(0 30px, 0 0 7vw);
 
                 }
 
@@ -126,15 +126,32 @@
 
                             &.schedule__date {
                                 @include pl(30px,0);
+                                @include max(s) {
+                                    padding-right: 0;
+                                }
+                            }
+
+                            &.schedule__time {
+                                @include max(s) {
+                                    padding: 0;
+                                }
                             }
                         }
 
                         &__date {
-                            @include width(140px,22vw);
+                            @include width(150px,22vw);
+
+                            @include max(s) {
+                                text-align: center;
+                            }
                         }
 
                         &__time {
-                            @include width(80px,15vw);
+                            @include width(100px,15vw);
+
+                            @include max(s) {
+                                text-align: center;
+                            }
                         }
                     }
 
