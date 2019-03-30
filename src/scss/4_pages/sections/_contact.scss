@@ -23,6 +23,12 @@
             @include mb(40px, 5vw);
         }
 
+        .company {
+            @include mb(20px, 3vw);
+            @include fontSize(30px, 4vw);
+            font-weight: bold;
+        }
+
         .tel {
             @include fontSize(81.24px, 10.5vw);
             font-family: $font_din;
@@ -52,7 +58,7 @@
         }
 
         .note {
-            @include fontSize(13px, 2vw);
+            @include fontSize(16px, 3vw);
             @include mt(20px, 3vw);
         }
     }

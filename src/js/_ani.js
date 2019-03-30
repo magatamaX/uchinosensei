@@ -5,7 +5,6 @@ const Ani = () => {
     const targets = Array.from ( document.querySelectorAll('.j-ani') );
     const markers = Array.from ( document.querySelectorAll('.j-marker-solo'));
 
-
     if ( !targets.length ) {
         return;
     }

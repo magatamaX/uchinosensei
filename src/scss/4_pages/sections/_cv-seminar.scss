@@ -15,7 +15,7 @@
             @include fontSize(28px, 5vw);
             line-height: 66px;
             font-weight: bold;
-            @include mb(60px, 10vw);
+            @include mb(60px, 0);
 
             @include max(s) {
                 line-height: 2;

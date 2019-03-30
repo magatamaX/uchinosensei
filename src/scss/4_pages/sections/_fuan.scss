@@ -8,10 +8,14 @@
 // ---------------------------------------------------------------------------
     .p-fuan {
 
-        background-color: #D4F2FF;
+        $fuan_color: #d4f2ff;
+
+        background-color: $fuan_color;
         @include pt(120px, 15vw);
         @include pb(40px, 15vw);
         text-align: center;
+
+        position: relative;
 
         .inner {
             background-image: url('./../images/fuan/fuanman.png');
@@ -31,10 +35,11 @@
 
             &__emph {
                 color: #0071BC;
-                font-weight: bold;
                 @include fontSize(73.74px, 7vw);
                 font-family: $font_heavy;
+                font-weight: 900;
             }
+
         }
 
         .list {
@@ -45,6 +50,7 @@
             @include mg(70px 0 90px, 10vw 0 30vw);
 
             %__item {
+                opacity: 0;
                 font-weight: bold;
                 display: inline-block;
                 position: absolute;
@@ -103,6 +109,8 @@
 
             &__emph {
                 @include fontSize(45.53px, 7vw);
+                font-family: $font_heavy;
+                font-weight: bold;
             }
         }
 
@@ -110,8 +118,79 @@
             font-weight: bold;
             @include fontSize(52.47px, 7vw);
 
+            span {
+                display: inline-block;
+                position: relative;
+                &::after {
+                    transition: all .5s ease-out 5s;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background-color: $fuan_color;
+                }
+            }
+
             @include max(s) {
                 text-align: left;
+            }
+        }
+
+        .arrow {
+            background-image: url('../images/fuan/arrow.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            position: absolute;
+
+            @include width(136.389px, 13.6389vw);
+            @include height(79.145px, 7.9145vw);
+
+            opacity: 0;
+            @include bottom(0px);
+            left: 50%;
+            transform: translateX(-50%);
+
+            z-index: 1;
+        }
+
+        .j-fuwa.on {
+            .list__item {
+                &--1 {
+                    transition: opacity 2s linear 2s;
+                    opacity: 1;
+                }
+
+                &--2 {
+                    transition: opacity 2s linear 3s;
+                    opacity: 1;
+                }
+
+                &--3 {
+                    transition: opacity 2s linear 4s;
+                    opacity: 1;
+                }
+            }
+
+            .next {
+                span {
+                    &::after {
+                        width: 0%;
+                        left: 100%;
+                    }
+                }
+            }
+
+            .arrow {
+                transition: all .5s ease-out 5.5s;
+
+                @include bottom(-62px, -5vw);
+                opacity: 1;
             }
         }
     }

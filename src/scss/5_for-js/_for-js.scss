@@ -11,15 +11,17 @@
         opacity: 0;
 
 
-        transition: all 1s ease-out;
 
-        @include max(s) {
-            transition: all .75s ease-out;
-
-        }
 
         &.on {
             opacity: 1;
+
+            transition: all 1s ease-out;
+
+            @include max(s) {
+                transition: all .75s ease-out;
+    
+            }
         }
     }
 
