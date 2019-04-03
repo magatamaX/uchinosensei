@@ -110,6 +110,14 @@
                     @include mb(0, 5vw);
                 }
             }
+
+            .button-area {
+
+                .button-item {
+                    @include mt(30px,5vw);
+                }
+
+            }
         }
 
     }

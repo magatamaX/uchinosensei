@@ -83,6 +83,14 @@
                     @include mg(20px auto, 7.5vw auto);
                 }
             }
+
+            .button-area {
+                .button-item {
+                    + .button-item {
+                        @include mt(20px,5vw);
+                    }
+                }
+            }
         }
 
         .point {

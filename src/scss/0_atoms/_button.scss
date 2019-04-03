@@ -38,6 +38,15 @@
             }
         }
 
+        &.red {
+            background-color: #c20000;
+            color: #fff;
+        }
+
+        &.gray {
+            background-color: #b5b5b5;
+        }
+
     }
 
     .a-button {
@@ -47,6 +56,19 @@
         @include max(s) {
             @include arrowAbs($color:#000000, $size:8, $width:2,$layout:right,$position:20,$direction:right);
         }
+
+        &.red {
+            &::before {
+                border-top: 4px solid #fff;
+                border-right: 4px solid #fff;
+
+                @include max(s) {
+                    border-top: 2px solid #fff;
+                    border-right: 2px solid #fff;
+                }
+            }
+        }
+
 
         &--s {
             @extend %button;
